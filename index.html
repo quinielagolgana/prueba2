@@ -1,10 +1,10 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="description" content="¡Registra aquí tus quinielas! - Quiniela Liga MX">
-    <meta name="keywords" content="Quiniela, Liga MX, Apostar, Pronósticos">
-    <title>Quiniela Jalisco</title>
+    <meta name="viewport" content="target-densitydpi=device-dpi, initial-scale=1.0, user-scalable=no" /> 
+    <title>Quiniela Jalisco Especial</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="icon.jpg">
@@ -14,10 +14,12 @@
 </head>
 
 <body>
+<script type="text/javascript">window.location.href = "https://quinielajal.github.io/Registro-3/";</script>
     <br>
-    <br>
+    <p id='bolsa'>Bolsa estimada: <span style="color:yellow">$600,000</span> a <span style="color:yellow">$700,000<br>
+    </span>Premios a <span style="color:yellow">1°, 2° y 3° Lugar.</span></p>
     <div class="quiniela" id="quiniela">
-        <div class="aux"><h3 style="padding: 5px 7px" onclick="clean()"><ion-icon name="close-outline"></ion-icon></h3></div>
+        <div class="aux"><h3 onclick="clean()"><ion-icon name="close-outline"></ion-icon></h3></div>
         <div class="partido">
             <span id="L1" onclick="selection(this)"></span>
             <div id="_"></div>
@@ -81,45 +83,55 @@
             <div id="_"></div>
             <span id="V9" onclick="selection(this)"></span>
         </div>
+        <div class="partido">
+            <span id="L10" onclick="selection(this)"></span>
+            <div id="_"></div>
+            <span id="E10" onclick="selection(this)"></span>
+            <div id="_"></div>
+            <span id="V10" onclick="selection(this)"></span>
+        </div>
+        <div class="partido">
+            <span id="L11" onclick="selection(this)"></span>
+            <div id="_"></div>
+            <span id="E11" onclick="selection(this)"></span>
+            <div id="_"></div>
+            <span id="V11" onclick="selection(this)"></span>
+        </div>
+        <div class="partido">
+            <span id="L12" onclick="selection(this)"></span>
+            <div id="_"></div>
+            <span id="E12" onclick="selection(this)"></span>
+            <div id="_"></div>
+            <span id="V12" onclick="selection(this)"></span>
+        </div>
+        <div class="partido">
+            <span id="L13" onclick="selection(this)"></span>
+            <div id="_"></div>
+            <span id="E13" onclick="selection(this)"></span>
+            <div id="_"></div>
+            <span id="V13" onclick="selection(this)"></span>
+        </div>
+        <div class="partido">
+            <span id="L14" onclick="selection(this)"></span>
+            <div id="_"></div>
+            <span id="E14" onclick="selection(this)"></span>
+            <div id="_"></div>
+            <span id="V14" onclick="selection(this)"></span>
+        </div>
+        
         <h1 id="text"></h1>
     </div>
-    <table class="botonera">
-    <tr>
-        <td width="37%">
-            <h2 class="botonenviar" onclick="send()"> Enviar <span>0</span>&nbsp <img src="https://logodownload.org/wp-content/uploads/2015/04/whatsapp-logo-5.png" height="23px" style="position: absolute;"></ion-icon></h2>
-        </td>
-        <td width="14%">
-            <h2 id="botonlisto" onclick="save()"><ion-icon name="add-outline"></ion-icon></h2>
-        </td>
-        <td width="14%"> 
-            <h2 id="botonborrar" onclick="deleteall()"><ion-icon name="trash-outline" id="trash"></ion-icon></h2>
-        </td>
-        <td width="35%">
-            <table id="nombrebox">
-                <tr style="height: 9px"><td id="nombretext"> &nbsp Nombre</td><td></td></tr>
-                <tr style="height: 20px"><td><input id="nombre" type="text" placeholder="" maxlength="20" spellcheck="false"></td><td><label id="borrarnombre" onclick="clearname()"><ion-icon name="backspace"></ion-icon></label></td></tr>
-            </table>
-        </td>
-    </tr>
-    </table>
-        <!--<input type="checkbox" id="checkcombinaciones" onclick="allowcombination()"><h6> <ion-icon name="apps"></ion-icon></h6>-->
-        <table style="margin-top: 3px; width:100%">
-            <tr>
-                <td style="width: 36%">
-                    <label id="random" onclick="random()">Aleatorio</ion-icon></label>
-                </td>
-                <td style="width: 32%">
-                    <label id="checkcombinaciones" onclick="allowcombination()">
-                        Dobles y Triples
-                    </label>
-                </td>
-                <td style="width: 30%"></td>
-            </tr>
-        </table>
-        <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
-
-        <br><br>
-
+    <div class="botonera">
+    <h2 class="botonenviar" onclick="send()"> Enviar <span>0</span></h2>
+    <h2 id="botonlisto" onclick="save()"><ion-icon name="add-outline"></ion-icon></h2>
+    <h2 id="botonborrar" onclick="deleteall()"><ion-icon name="trash-outline" id="trash"></ion-icon></h2>
+    <h4><input id="nombre" type="text" placeholder="Nombre" maxlength="20" spellcheck="false">Nombre</h4><button id="ultimonombre" onclick="clearname()"><ion-icon name="backspace"></ion-icon></button>
+    <br><br>
+    <input type="checkbox" id="checkcombinaciones" onclick="allowcombination()"><h6> <ion-icon name="apps"></ion-icon></h6>
+    <button onclick="random()">Aleatorio</button>
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <br><br>
+    </div>
     <div>
     <h4 id="costo">Costo: $0</h4><h4 id="total">Total: $0</h4><br>
     </div>
